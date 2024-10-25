@@ -36,7 +36,7 @@ public class Humain {
 	
 	protected void gagnerArgent(int gain) {
 		argent += gain;
-		parler("J'ai gagner " + gain + " sous !");
+		parler(argent + " sous ! Je te remercie généreux donateur !");
 	}
 	
 	protected void perdreArgent(int perte) {
