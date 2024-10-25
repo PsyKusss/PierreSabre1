@@ -34,14 +34,18 @@ public class Humain {
 		parler("Mmmm, un bon verre de " + boissonFavorite + " ! GLOUPS !");
 	}
 	
-	protected void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain, boolean afficherMessage) {
 		argent += gain;
-		parler(argent + " sous ! Je te remercie généreux donateur !");
+		if (afficherMessage) {
+			parler(argent + " sous ! Je te remercie généreux donateur !");
+		}
 	}
 	
-	protected void perdreArgent(int perte) {
+	protected void perdreArgent(int perte, boolean afficherMessage) {
 		argent -= perte;
-		parler("Je n'ai plus que " + argent + " sous en poche.");
+		if (afficherMessage) {
+			parler("Je n'ai plus que " + argent + " sous en poche.");
+		}
 	}
 	
 	public void acheter(String bien, int prix) {
